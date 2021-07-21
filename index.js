@@ -5,6 +5,7 @@ const { createPrometheusExporterPlugin } = require("@bmatei/apollo-prometheus-ex
 const express = require('express');
 
 const app =  express();
+app.use(cors())
 
 // A schema is a collection of type definitions (hence "typeDefs")
 // that together define the "shape" of queries that are executed against
@@ -53,7 +54,8 @@ const prometheusExporterPlugin = createPrometheusExporterPlugin({app});
 const server = new ApolloServer({ 
     typeDefs, 
     resolvers, 
-    plugins:[prometheusExporterPlugin] 
+    plugins:[prometheusExporterPlugin],
+    cors: false
 });
 
 // The `listen` method launches a web server.
