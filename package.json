@@ -1,0 +1,19 @@
+{
+  "name": "server-getting-started",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@bmatei/apollo-prometheus-exporter": "^1.2.0",
+    "apollo-server": "^3.0.1",
+    "express": "^4.17.1",
+    "graphql": "^15.5.1",
+    "prom-client": "^13.1.0"
+  }
+}
